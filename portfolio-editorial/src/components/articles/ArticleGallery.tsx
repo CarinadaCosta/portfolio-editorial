@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 type ArticleGalleryProps = {
   images: string[];
@@ -63,9 +64,11 @@ export default function ArticleGallery({
               onClick={() => setSelectedIndex(index)}
               className="relative aspect-[4/3] w-[85%] shrink-0 overflow-hidden"
             >
-              <img
+              <Image
                 src={image}
                 alt=""
+                fill
+                sizes="(max-width: 640px) 85vw, 33vw"
                 className="h-full w-full object-cover"
               />
             </button>
@@ -81,9 +84,11 @@ export default function ArticleGallery({
               onClick={() => setSelectedIndex(index)}
               className="relative aspect-[3/2] overflow-hidden"
             >
-              <img
+              <Image
                 src={image}
                 alt=""
+                fill
+                sizes="(max-width: 640px) 100vw, 33vw"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </button>
@@ -111,8 +116,10 @@ export default function ArticleGallery({
             ‹
           </button>
 
-          <img
+          <Image
             src={images[selectedIndex]}
+            width={1600}
+            height={1067}
             alt=""
             className="max-h-[90vh] max-w-[90vw] object-contain"
           />
