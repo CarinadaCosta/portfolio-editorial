@@ -39,6 +39,7 @@ export default async function ArticlePage({
           src={article.image}
           alt={article.title}
           fill
+          loading="eager"
           sizes="(max-width: 1024px) 100vw, 896px"
           className="h-full w-full object-cover"
         />
