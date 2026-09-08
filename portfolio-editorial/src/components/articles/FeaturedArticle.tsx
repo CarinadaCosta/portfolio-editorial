@@ -1,4 +1,5 @@
 import { formatDate } from "@/lib/FormatDate";
+import Image from "next/image";
 
 type FeaturedArticleProps = {
   title: string;
@@ -20,9 +21,12 @@ export default function FeaturedArticle({ title, date, image, href }: FeaturedAr
         </div>
 
         <div className="relative mt-6 aspect-[4/3] overflow-hidden md:mt-0 md:aspect-auto md:[grid-row:2/6]">
-          <img
+          <Image
             src={image}
             alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 66vw"
+            loading="eager"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

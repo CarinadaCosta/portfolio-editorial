@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ArticleGallery from "@/components/articles/ArticleGallery";
 import { getArticles } from "@/lib/getArticles";
+import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 type ArticlePageProps = {
@@ -34,9 +35,11 @@ export default async function ArticlePage({
       </p>
 
       <div className="relative mt-8 aspect-[16/9] overflow-hidden">
-        <img
+        <Image
           src={article.image}
           alt={article.title}
+          fill
+          sizes="(max-width: 1024px) 100vw, 896px"
           className="h-full w-full object-cover"
         />
       </div>

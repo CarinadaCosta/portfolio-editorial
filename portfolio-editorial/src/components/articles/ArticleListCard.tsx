@@ -1,4 +1,5 @@
 import { formatDate } from "@/lib/FormatDate";
+import Image from "next/image";
 
 type ArticleListCardProps = {
   title: string;
@@ -20,9 +21,11 @@ export default function ArticleListCard({
         className="group block overflow-hidden rounded-sm border border-border bg-card transition-colors duration-300 hover:border-accent"
       >
         <div className="relative aspect-[4/3] overflow-hidden">
-          <img
+          <Image
             src={image}
             alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
