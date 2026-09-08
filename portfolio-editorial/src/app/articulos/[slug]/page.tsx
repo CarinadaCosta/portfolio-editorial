@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ArticleGallery from "@/components/articles/ArticleGallery";
-import { articles } from "@/data/articles";
+import { getArticles } from "@/lib/getArticles";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 type ArticlePageProps = {
   params: Promise<{
@@ -12,6 +13,8 @@ export default async function ArticlePage({
   params,
 }: ArticlePageProps) {
   const { slug } = await params;
+
+  const articles = await getArticles();
 
   const article = articles.find((article) => article.slug === slug);
 
@@ -38,36 +41,15 @@ export default async function ArticlePage({
         />
       </div>
 
-      <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-text">
-        <p>
-          Este es el contenido principal del artículo. Aquí comenzará el
-          desarrollo de la historia, con los distintos elementos narrativos y
-          periodísticos.
-        </p>
+      {article.content && (
+        <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-text">
+          {documentToReactComponents(article.content as any)}
+        </div>
+      )}
 
-        <p>
-          Podemos incorporar diferentes párrafos manteniendo una medida de
-          lectura cómoda y una jerarquía visual consistente con el resto del
-          sitio.
-        </p>
-
-        <p>
-          Más adelante este contenido será reemplazado por el contenido
-          enriquecido proveniente del CMS.
-        </p>
-      </div>
-
-      <ArticleGallery
-        images={[
-          "/articles-photo/1.jpg",
-          "/articles-photo/2.jpg",
-          "/articles-photo/3.jpg",
-          "/articles-photo/4.jpg",
-          "/articles-photo/5.jpg",
-          "/articles-photo/7.jpeg",
-        ]}
-      />
-
+      {article.gallery && article.gallery.length > 0 && (
+      <ArticleGallery images={article.gallery} />
+)}
       {(article.instagramUrl || article.pdfUrl) && (
         <div className="mt-12 flex flex-wrap gap-4">
           {article.instagramUrl && (

@@ -1,24 +1,31 @@
-export default function NotFound() {
+"use client";
+
+export default function Error({
+  reset,
+}: {
+  reset: () => void;
+}) {
   return (
     <main className="mx-auto flex min-h-[60vh] w-full max-w-5xl flex-col items-center justify-center px-6 text-center">
       <p className="text-sm uppercase tracking-widest text-accent">
-        404
+        Error
       </p>
 
       <h1 className="mt-4 font-heading text-4xl leading-tight text-foreground md:text-5xl">
-        Página no encontrada
+        Algo salió mal
       </h1>
 
       <p className="mt-4 max-w-md text-text">
-        La página que estás buscando no existe o ya no está disponible.
+        Ocurrió un error inesperado. Intentá nuevamente.
       </p>
 
-      <a
-        href="/"
+      <button
+        type="button"
+        onClick={() => reset()}
         className="mt-8 border border-border px-5 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-70"
       >
-        Volver al inicio
-      </a>
+        Intentar nuevamente
+      </button>
     </main>
   );
 }

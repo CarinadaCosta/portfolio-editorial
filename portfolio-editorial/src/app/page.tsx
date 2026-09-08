@@ -1,10 +1,22 @@
 import FeaturedArticle from "@/components/articles/FeaturedArticle";
 import ArticleCard from "@/components/articles/ArticleCard";
-import { articles } from "@/data/articles";
+import { getArticles } from "@/lib/getArticles";
 
-export default function Home() {
-  const featuredArticle = articles[0];
-  const secondaryArticles = articles.slice(1, 3);
+export default async function Home() {
+  const articles = await getArticles();
+
+const featuredArticles = articles
+  .filter((article) => article.featured)
+  .sort(
+    (a, b) =>
+      (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999)
+  );
+
+  const featuredArticle = featuredArticles[0];
+  const secondaryArticles = featuredArticles.slice(1, 3); 
+  if (!featuredArticle) {
+    return null;
+  }
 
   return (
     <div className="mx-auto w-full max-w-5xl px-6 py-16">
@@ -33,10 +45,10 @@ export default function Home() {
               image={article.image}
               href={`/articulos/${article.slug}`}
               className={
-              i === 0
-                ? "md:[grid-row:1/4] md:[&>a>h2]:translate-y-22 md:[&>a>time]:-translate-y-0 md:[&>a>div]:-mb-8"
-                : "md:[grid-row:4/7] md:[&>a>h2]:-translate-y-1 md:[&>a>time]:-translate-y-7 md:[&>a>div]:-mt-8"
-            }
+                i === 0
+                  ? "md:[grid-row:1/4] md:[&>a>h2]:translate-y-22 md:[&>a>time]:-translate-y-0 md:[&>a>div]:-mb-8"
+                  : "md:[grid-row:4/7] md:[&>a>h2]:-translate-y-1 md:[&>a>time]:-translate-y-7 md:[&>a>div]:-mt-8"
+              }
             />
           ))}
         </div>
