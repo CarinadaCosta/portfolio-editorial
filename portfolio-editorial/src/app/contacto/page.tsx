@@ -28,7 +28,7 @@ export default function ContactoPage() {
                 href="mailto:correo@ejemplo.com"
                 className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"
               >
-                correo@ejemplo.com
+                webdacosta@gmail.com
               </a>
             </div>
 
@@ -38,10 +38,12 @@ export default function ContactoPage() {
               </span>
 
               <a
-                href="#"
-                className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"
+              href="https://www.linkedin.com/in/carina-da-costa-a2a5543b4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"
               >
-                LinkedIn
+                Carina da Costa
               </a>
             </div>
 
@@ -51,10 +53,12 @@ export default function ContactoPage() {
               </span>
 
               <a
-                href="#"
-                className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"
+                href="https://www.instagram.com/carinadacosta13/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"       
               >
-                Instagram
+                @carinadacosta13
               </a>
             </div>
           </div>

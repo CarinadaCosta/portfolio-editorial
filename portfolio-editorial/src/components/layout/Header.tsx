@@ -17,8 +17,23 @@ export default function Header() {
         </div>
 
         <div className="mr-0 flex items-center gap-4 justify-self-end md:mr-14">
+          <a
+          href="https://www.instagram.com/carinadacosta13/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          >
           <InstagramIcon />
+          </a>
+          
+          <a
+          href="https://www.linkedin.com/in/carina-da-costa-a2a5543b4/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          >
           <LinkedInIcon />
+          </a>
         </div>
       </div>
     </header>
