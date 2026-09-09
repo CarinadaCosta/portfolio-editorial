@@ -30,6 +30,7 @@ export default function Navigation() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={`text-sm transition-colors ${
                     isActive
                       ? "border-b border-accent pb-1 text-text"
@@ -59,7 +60,7 @@ export default function Navigation() {
         {isOpen && (
           <nav
             aria-label="Navegación móvil"
-            className="absolute left-0 top-20 w-full border-b border-border bg-background"
+            className="absolute left-0 z-50 top-20 w-full border-b border-border bg-background"
           >
             <ul className="flex flex-col px-6 py-6">
               {navigation.map((item) => {
@@ -73,6 +74,7 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
+                      aria-current={isActive ? "page" : undefined}
                       className={`block py-3 text-sm transition-colors ${
                         isActive
                           ? "text-text"

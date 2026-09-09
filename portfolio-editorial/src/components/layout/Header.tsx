@@ -8,7 +8,9 @@ export default function Header() {
       <div className="mx-auto grid min-h-20 w-full max-w-7xl grid-cols-[1fr_auto_auto] items-center px-6">
         <div className="justify-self-start">
           <span className="ml-0 font-heading text-2xl text-foreground md:ml-12">
-            LOGO
+            <a href="/" aria-label="ir al inicio">
+              LOGO
+            </a>
           </span>
         </div>
 

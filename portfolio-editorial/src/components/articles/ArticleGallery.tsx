@@ -97,7 +97,11 @@ export default function ArticleGallery({
       </div>
 
       {selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Galería de imágenes"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
           <button
             type="button"
             onClick={() => setSelectedIndex(null)}
