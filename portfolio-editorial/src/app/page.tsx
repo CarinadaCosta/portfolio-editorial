@@ -2,6 +2,7 @@ import FeaturedArticle from "@/components/articles/FeaturedArticle";
 import ArticleCard from "@/components/articles/ArticleCard";
 import { getArticles } from "@/lib/getArticles";
 
+export const revalidate = 0;
 export default async function Home() {
   const articles = await getArticles();
 

@@ -20,7 +20,7 @@ export default function FeaturedArticle({ title, date, image, href }: FeaturedAr
           </h1>
         </div>
 
-        <div className="relative mt-6 aspect-[4/3] overflow-hidden md:mt-0  md:[grid-row:2/6]">
+        <div className="relative mt-6 aspect-[4/3] overflow-hidden md:mt-0 md:aspect-auto md:[grid-row:2/6]">
           <Image
             src={image}
             alt=""
