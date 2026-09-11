@@ -49,7 +49,7 @@ export async function getArticles(): Promise<Article[]> {
   } | undefined;
 
   return {
-    slug: slugify(fields.slug as string),
+    slug: slugify(fields.title as string),
     featured: fields.featured as boolean | undefined,
     featuredOrder: fields.featuredOrder as number | undefined,
     title: fields.title as string,
