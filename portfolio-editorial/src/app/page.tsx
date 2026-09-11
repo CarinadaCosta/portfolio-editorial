@@ -47,7 +47,7 @@ const featuredArticles = articles
               href={`/articulos/${article.slug}`}
               className={
                 i === 0
-                  ? "md:[grid-row:1/4] md:[&>a>h2]:translate-y-22 md:[&>a>time]:-translate-y-0 md:[&>a>div]:-mb-8"
+                  ? "md:[grid-row:1/4] md:[&>a>h2]:translate-y-7 md:[&>a>time]:-translate-y-0 md:[&>a>div]:-mb-8"
                   : "md:[grid-row:4/7] md:[&>a>h2]:-translate-y-1 md:[&>a>time]:-translate-y-7 md:[&>a>div]:-mt-8"
               }
             />
