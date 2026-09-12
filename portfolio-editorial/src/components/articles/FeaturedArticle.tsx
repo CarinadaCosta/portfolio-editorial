@@ -7,9 +7,10 @@ type FeaturedArticleProps = {
   date: string;
   image: string;
   href: string;
+  hasSecondary: boolean;
 };
 
-export default function FeaturedArticle({ title, date, image, href }: FeaturedArticleProps) {
+export default function FeaturedArticle({ title, date, image, href, hasSecondary }: FeaturedArticleProps) {
   return (
     <article className="md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/-1]">
       <a href={href} 
@@ -20,7 +21,11 @@ export default function FeaturedArticle({ title, date, image, href }: FeaturedAr
           </h1>
         </div>
 
-        <div className="relative mt-6 aspect-[4/3] overflow-hidden md:mt-0 md:aspect-auto md:[grid-row:2/6]">
+        <div
+            className={`relative mt-6 overflow-hidden md:mt-0 md:[grid-row:2/6] ${
+              hasSecondary ? "md:aspect-auto" : "aspect-[4/3]"
+            }`}
+          >
           <Image
             src={image}
             alt=""

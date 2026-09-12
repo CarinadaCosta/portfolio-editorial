@@ -35,6 +35,7 @@ const featuredArticles = articles
           date={featuredArticle.date}
           image={featuredArticle.image}
           href={`/articulos/${featuredArticle.slug}`}
+          hasSecondary={secondaryArticles.length > 0}
         />
 
         <div className="flex flex-col gap-10 md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/-1]">
