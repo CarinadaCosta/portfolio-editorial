@@ -28,7 +28,7 @@ export default function ContactoPage() {
                 href="mailto:correo@ejemplo.com"
                 className="mt-2 block text-base text-foreground transition-opacity hover:opacity-70"
               >
-                webdacosta@gmail.com
+                webcdacosta@gmail.com
               </a>
             </div>
 
