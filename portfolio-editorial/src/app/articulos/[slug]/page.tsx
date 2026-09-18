@@ -46,7 +46,7 @@ export default async function ArticlePage({
       </div>
 
       {article.content && (
-        <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-text">
+        <div className="mt-10  space-y-6 text-base leading-relaxed text-text">
           {documentToReactComponents(article.content as any)}
         </div>
       )}
