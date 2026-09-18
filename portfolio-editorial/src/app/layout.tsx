@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Montserrat } from "next/font/google";
+import { Bitter, Montserrat } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const dmSerifDisplay = DM_Serif_Display({
+const bitter = Bitter({
   weight: "400",
-  variable: "--font-dm-serif-display",
+  variable: "--font-bitter",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${dmSerifDisplay.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${bitter.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />

@@ -31,10 +31,10 @@ export default function SobreMiPage() {
             </p>
 
             <p>
-              La conexión entre estas dos formas de expresar los instantes y
-              las vivencias me parece perfecta. Esta idea es la que motivó a crear este proyecto;
-              un sitio web, un espacio donde narrar historias y hechos que se suceden en las calles,
-              en las plazas, o en cualquier parte de mi querido país, Uruguay.
+              La conexión entre estas dos formas de expresar los instantes y las vivencias me parece 
+              perfecta. Esta idea es la que motivó a crear este proyecto; un sitio web, un espacio 
+              donde mostrar lugares, narrar historias y hechos que se suceden en cualquier parte de 
+              Uruguay o el mundo.
             </p>
           </div>
         </div>
