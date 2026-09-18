@@ -31,7 +31,7 @@ export default function ArticleListCard({
         </div>
 
         <div className="p-5">
-          <h2 className="font-heading text-2xl leading-[1.05] text-foreground">
+          <h2 className="font-heading text-xl md:text-lg leading-[1.05] text-foreground">
             {title}
           </h2>
 

@@ -26,7 +26,7 @@ export default async function ArticlePage({
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-16">
 
-      <h1 className="mt-2 font-heading text-3xl leading-[1.00] text-foreground md:text-4xl">
+      <h1 className="mt-2 font-heading text-xl leading-[1.00] text-foreground md:text-2xl">
         {article.title}
       </h1>
 
