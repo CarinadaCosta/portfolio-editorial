@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Bitter, Montserrat } from "next/font/google";
+import { Khula, Montserrat } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const bitter = Bitter({
-  weight: "400",
-  variable: "--font-bitter",
+const khula = Khula({
+  weight: "700",
+  variable: "--font-khula",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${bitter.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${khula.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />

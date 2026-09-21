@@ -16,7 +16,7 @@ export default function FeaturedArticle({ title, date, image, href, hasSecondary
       <a href={href} 
       className="group block md:contents">
         <div className="md:[grid-row:1]">
-          <h1 className="font-heading text-xl leading-[1.00] text-foreground md:text-2xl">
+          <h1 className="font-heading text-xl  tracking-[0.05em] leading-[1.10] text-foreground md:text-2xl">
             {title}
           </h1>
         </div>
