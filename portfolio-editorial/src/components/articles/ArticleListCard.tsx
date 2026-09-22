@@ -31,12 +31,12 @@ export default function ArticleListCard({
         </div>
 
         <div className="p-5">
-          <h2 className="font-heading text-xl md:text-sm leading-[1.05] text-foreground">
+          <h2 className="font-heading text-xl md:text-base tracking-[0.05em] leading-[1.05] text-foreground">
             {title}
           </h2>
 
           <div className="mt-5 flex items-center justify-between">
-            <time className="text-sm text-text">{formatDate(date)}</time>
+            <time className="text-xs text-text">{formatDate(date)}</time>
 
             <span
               className="text-xl text-accent transition-transform duration-300 group-hover:translate-x-1"

@@ -12,7 +12,7 @@ export default function ArticleCard({ title, date, image, href, className = "" }
   return (
     <article className={`md:grid md:[grid-template-rows:subgrid] ${className}`}>
       <a href={href} className="group block md:contents">
-        <h2 className="font-heading text-sm leading-[1.00] text-foreground md:[grid-row:1]">
+        <h2 className="font-heading text-lg md:text-base tracking-[0.05em] leading-[1.00] text-foreground md:[grid-row:1]">
           {title}
         </h2>
 
@@ -24,7 +24,7 @@ export default function ArticleCard({ title, date, image, href, className = "" }
           />
         </div>
 
-        <time className="mt-2 block text-sm text-text md:mt-0 md:[grid-row:3] ">
+        <time className="mt-2 block text-xs text-text md:mt-0 md:[grid-row:3] ">
           {formatDate(date)}
         </time>
       </a>

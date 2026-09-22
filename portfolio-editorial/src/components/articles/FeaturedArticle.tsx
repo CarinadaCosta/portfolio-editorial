@@ -36,7 +36,7 @@ export default function FeaturedArticle({ title, date, image, href, hasSecondary
           />
         </div>
 
-        <time className="mt-3 block text-sm text-text md:mt-0 md:[grid-row:6]  md:-translate-y-3">
+        <time className="mt-3 block text-xs text-text md:mt-0 md:[grid-row:6]  md:-translate-y-3">
           {formatDate(date)}
         </time>
       </a>

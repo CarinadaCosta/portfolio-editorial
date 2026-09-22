@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
+import Image from "next/image";
 import { InstagramIcon } from "@/components/ui/SocialIcons";
 import { LinkedInIcon } from "@/components/ui/SocialIcons";
 
@@ -6,12 +7,15 @@ export default function Header() {
   return (
     <header className="relative border-b border-border">
       <div className="mx-auto grid min-h-20 w-full max-w-7xl grid-cols-[1fr_auto_auto] items-center px-6">
-        <div className="justify-self-start">
-          <span className="ml-0 font-heading text-2xl text-foreground md:ml-12">
+        <div className="justify-self-start md:ml-12"> 
             <a href="/" aria-label="ir al inicio">
-              LOGO
-            </a>
-          </span>
+              <Image
+              src="/logo/logo.png"
+              alt="logodeCarina da Costa"
+              width={80}
+              height={80}   
+              />
+            </a> 
         </div>
 
         <div className="mr-4 justify-self-end md:mr-12">
