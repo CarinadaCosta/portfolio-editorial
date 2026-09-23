@@ -24,7 +24,7 @@ export default function ArticleCard({ title, date, image, href, className = "" }
           />
         </div>
 
-        <time className="mt-2 block text-xs text-text md:mt-0 md:[grid-row:3] ">
+        <time className="mt-2 block text-[8px] md:text-[8px] text-text md:mt-0 md:[grid-row:3] ">
           {formatDate(date)}
         </time>
       </a>

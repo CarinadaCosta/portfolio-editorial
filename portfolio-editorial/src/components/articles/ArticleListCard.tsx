@@ -36,7 +36,7 @@ export default function ArticleListCard({
           </h2>
 
           <div className="mt-5 flex items-center justify-between">
-            <time className="text-xs text-text">{formatDate(date)}</time>
+            <time className="text-[8px] md:text-[8px] text-text">{formatDate(date)}</time>
 
             <span
               className="text-xl text-accent transition-transform duration-300 group-hover:translate-x-1"

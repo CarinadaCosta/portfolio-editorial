@@ -23,7 +23,7 @@ export default function FeaturedArticle({ title, date, image, href, hasSecondary
 
         <div
             className={`relative mt-6 overflow-hidden md:mt-0 md:[grid-row:2/6] ${
-              hasSecondary ? "md:aspect-auto" : "aspect-[4/3]"
+             hasSecondary ? "aspect-[4/3] md:aspect-auto" : "aspect-[4/3]"
             }`}
           >
           <Image
@@ -36,7 +36,7 @@ export default function FeaturedArticle({ title, date, image, href, hasSecondary
           />
         </div>
 
-        <time className="mt-3 block text-xs text-text md:mt-0 md:[grid-row:6]  md:-translate-y-3">
+        <time className="mt-3 block text-[8px] md:text-[8px] text-text md:mt-0 md:[grid-row:6]  md:-translate-y-3">
           {formatDate(date)}
         </time>
       </a>
