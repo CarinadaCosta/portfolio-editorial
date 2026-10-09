@@ -68,8 +68,7 @@ export default async function ArticlePage({
   }
 
   const articleUrl = `https://carinadacosta.com/articulos/${slug}`;
-  const shareText = `${article.title}\n\n${articleUrl}`;
-  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(articleUrl)}`;
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-16">
