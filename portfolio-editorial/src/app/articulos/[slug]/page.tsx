@@ -33,7 +33,9 @@ export async function generateMetadata({
       images: article.image
         ? [
             {
-              url: article.image,
+              url: `${article.image}?w=1200&h=630&fit=fill&fm=jpg&q=80`,
+              width: 1200,
+              height: 630,
               alt: article.title,
             },
           ]
@@ -44,7 +46,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
-      images: article.image ? [article.image] : [],
+      images: article.image
+      ? [`${article.image}?w=1200&h=630&fit=fill&fm=jpg&q=80`]
+      : [],
     },
   };
 }
